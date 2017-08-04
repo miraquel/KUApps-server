@@ -1,0 +1,80 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Districts": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "Provinces": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "Regencies": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "Villages": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "Admin": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "CatinPria": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "CatinWanita": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "Penghulu": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "Nikah": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "Invoice": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "MyACL": {
+    "dataSource": "dbkuapps",
+    "public": false
+  },
+  "MyRole": {
+    "dataSource": "dbkuapps",
+    "public": false
+  },
+  "MyRoleMapping": {
+    "dataSource": "dbkuapps",
+    "public": false
+  },
+  "MyAccessToken": {
+    "dataSource": "dbkuapps",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Admin",
+        "foreignKey": "",
+        "primaryKey": "id"
+      }
+    }
+  }
+}

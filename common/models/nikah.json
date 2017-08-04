@@ -1,0 +1,85 @@
+{
+  "name": "Nikah",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "catinpriaId": {
+      "type": "number",
+      "required": true
+    },
+    "catinwanitaId": {
+      "type": "number",
+      "required": true
+    },
+    "adminId": {
+      "type": "number",
+      "required": true
+    },
+    "villageId": {
+      "type": "number",
+      "required": true
+    },
+    "penghuluId": {
+      "type": "number",
+      "required": true
+    },
+    "invoiceId": {
+      "type": "number",
+      "required": false
+    },
+    "no_akta": {
+      "type": "string",
+      "required": false
+    },
+    "no_porporasi": {
+      "type": "string",
+      "required": false
+    },
+    "tanggal": {
+      "type": "date",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "catinPria": {
+      "type": "belongsTo",
+      "model": "CatinPria",
+      "foreignKey": "",
+      "primaryKey": "id"
+    },
+    "catinWanita": {
+      "type": "belongsTo",
+      "model": "CatinWanita",
+      "foreignKey": "",
+      "primaryKey": "id"
+    },
+    "penghulu": {
+      "type": "belongsTo",
+      "model": "Penghulu",
+      "foreignKey": "",
+      "primaryKey": "id"
+    },
+    "villages": {
+      "type": "belongsTo",
+      "model": "Villages",
+      "foreignKey": "villageId",
+      "primaryKey": "id"
+    },
+    "invoice": {
+      "type": "belongsTo",
+      "model": "Invoice",
+      "foreignKey": "",
+      "primaryKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

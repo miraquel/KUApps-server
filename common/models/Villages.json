@@ -1,0 +1,76 @@
+{
+  "name": "Villages",
+  "settings": {
+    "strict": false,
+    "replaceOnPUT": true,
+    "idInjection": false,
+    "mysql": {
+      "schema": "kuapps",
+      "table": "villages"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": 1,
+      "required": true,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "char",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "districtId": {
+      "type": "string",
+      "required": true,
+      "length": 7,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "district_id",
+        "dataType": "char",
+        "dataLength": 7,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "length": 255,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "district": {
+      "type": "belongsTo",
+      "model": "Districts",
+      "foreignKey": "",
+      "primaryKey": "id"
+    },
+    "nikahs": {
+      "type": "hasMany",
+      "model": "Nikah",
+      "foreignKey": "villageId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

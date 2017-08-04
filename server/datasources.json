@@ -1,0 +1,12 @@
+{
+  "dbkuapps": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "kuapps",
+    "password": "",
+    "name": "dbkuapps",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
