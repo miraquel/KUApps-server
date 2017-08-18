@@ -53,28 +53,24 @@
     "dataSource": "dbkuapps",
     "public": true
   },
-  "MyACL": {
+  "User": {
     "dataSource": "dbkuapps",
     "public": false
   },
-  "MyRole": {
+  "AccessToken": {
     "dataSource": "dbkuapps",
     "public": false
   },
-  "MyRoleMapping": {
+  "ACL": {
     "dataSource": "dbkuapps",
     "public": false
   },
-  "MyAccessToken": {
+  "RoleMapping": {
     "dataSource": "dbkuapps",
-    "public": false,
-    "relations": {
-      "user": {
-        "type": "belongsTo",
-        "model": "Admin",
-        "foreignKey": "",
-        "primaryKey": "id"
-      }
-    }
+    "public": false
+  },
+  "Role": {
+    "dataSource": "dbkuapps",
+    "public": false
   }
 }

@@ -6,30 +6,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "catinpriaId": {
-      "type": "number",
-      "required": true
-    },
-    "catinwanitaId": {
-      "type": "number",
-      "required": true
-    },
-    "adminId": {
-      "type": "number",
-      "required": true
-    },
-    "villageId": {
-      "type": "number",
-      "required": true
-    },
-    "penghuluId": {
-      "type": "number",
-      "required": true
-    },
-    "invoiceId": {
-      "type": "number",
-      "required": false
-    },
     "no_akta": {
       "type": "string",
       "required": false
@@ -52,32 +28,27 @@
     "catinPria": {
       "type": "belongsTo",
       "model": "CatinPria",
-      "foreignKey": "",
-      "primaryKey": "id"
+      "foreignKey": "catinpriaId"
     },
     "catinWanita": {
       "type": "belongsTo",
       "model": "CatinWanita",
-      "foreignKey": "",
-      "primaryKey": "id"
+      "foreignKey": "catinwanitaId"
     },
     "penghulu": {
       "type": "belongsTo",
       "model": "Penghulu",
-      "foreignKey": "",
-      "primaryKey": "id"
+      "foreignKey": "penghuluId"
     },
     "villages": {
       "type": "belongsTo",
       "model": "Villages",
-      "foreignKey": "villageId",
-      "primaryKey": "id"
+      "foreignKey": "villageId"
     },
     "invoice": {
       "type": "belongsTo",
       "model": "Invoice",
-      "foreignKey": "",
-      "primaryKey": "id"
+      "foreignKey": "invoiceId"
     }
   },
   "acls": [],

@@ -3,7 +3,7 @@
     "host": "localhost",
     "port": 3306,
     "url": "",
-    "database": "kuapps",
+    "database": "kuapps_dev",
     "password": "",
     "name": "dbkuapps",
     "user": "root",

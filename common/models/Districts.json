@@ -2,7 +2,6 @@
   "name": "Districts",
   "settings": {
     "strict": false,
-    "replaceOnPUT": true,
     "idInjection": false,
     "mysql": {
       "schema": "kuapps",
@@ -21,21 +20,6 @@
         "columnName": "id",
         "dataType": "char",
         "dataLength": 7,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      }
-    },
-    "regencyId": {
-      "type": "string",
-      "required": true,
-      "length": 4,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "regency_id",
-        "dataType": "char",
-        "dataLength": 4,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "N"
@@ -62,13 +46,12 @@
     "regency": {
       "type": "belongsTo",
       "model": "Regencies",
-      "foreignKey": "",
-      "primaryKey": "id"
+      "foreignKey": "regencyId"
     },
     "villages": {
       "type": "hasMany",
       "model": "Villages",
-      "foreignKey": "district_id"
+      "foreignKey": "districtId"
     }
   },
   "acls": [],

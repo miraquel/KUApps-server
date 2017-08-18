@@ -16,17 +16,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "accessTokens": {
-      "type": "hasMany",
-      "model": "MyAccessToken",
-      "foreignKey": "adminId",
-      "primaryKey": "id",
-      "options": {
-        "disableInclude": true
-      }
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

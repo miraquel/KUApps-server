@@ -2,7 +2,6 @@
   "name": "Regencies",
   "settings": {
     "strict": false,
-    "replaceOnPUT": true,
     "idInjection": false,
     "mysql": {
       "schema": "kuapps",
@@ -26,21 +25,6 @@
         "nullable": "N"
       }
     },
-    "provinceId": {
-      "type": "string",
-      "required": true,
-      "length": 2,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "province_id",
-        "dataType": "char",
-        "dataLength": 2,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      }
-    },
     "name": {
       "type": "string",
       "required": true,
@@ -59,16 +43,10 @@
   },
   "validations": [],
   "relations": {
-    "province": {
-      "type": "belongsTo",
-      "model": "Provinces",
-      "foreignKey": "",
-      "primaryKey": "id"
-    },
     "districts": {
       "type": "hasMany",
       "model": "Districts",
-      "foreignKey": "regency_id"
+      "foreignKey": "regencyId"
     }
   },
   "acls": [],

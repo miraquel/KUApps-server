@@ -32,7 +32,7 @@
     "nikahs": {
       "type": "hasMany",
       "model": "Nikah",
-      "foreignKey": ""
+      "foreignKey": "invoiceId"
     }
   },
   "acls": [],
