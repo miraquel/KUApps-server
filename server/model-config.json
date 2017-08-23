@@ -67,10 +67,10 @@
   },
   "RoleMapping": {
     "dataSource": "dbkuapps",
-    "public": false
+    "public": true
   },
   "Role": {
     "dataSource": "dbkuapps",
-    "public": false
+    "public": true
   }
 }

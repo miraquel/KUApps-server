@@ -26,21 +26,6 @@
         "nullable": "N"
       }
     },
-    "districtId": {
-      "type": "string",
-      "required": true,
-      "length": 7,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "district_id",
-        "dataType": "char",
-        "dataLength": 7,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      }
-    },
     "name": {
       "type": "string",
       "required": true,
@@ -59,12 +44,6 @@
   },
   "validations": [],
   "relations": {
-    "district": {
-      "type": "belongsTo",
-      "model": "Districts",
-      "foreignKey": "",
-      "primaryKey": "id"
-    },
     "nikahs": {
       "type": "hasMany",
       "model": "Nikah",

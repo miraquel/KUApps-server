@@ -1,8 +1,7 @@
 var server = require('./server');
     var ds = server.dataSources.dbkuapps;
     var lbTables = [
-      'Provinces',
-      'Regencies'
+      'Admin'
     ];
     ds.automigrate(lbTables, function(er) {
         if (er) throw er;

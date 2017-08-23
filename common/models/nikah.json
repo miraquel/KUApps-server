@@ -25,30 +25,30 @@
   },
   "validations": [],
   "relations": {
-    "catinPria": {
+    "catinpria": {
       "type": "belongsTo",
       "model": "CatinPria",
       "foreignKey": "catinpriaId"
     },
-    "catinWanita": {
+    "catinwanita": {
       "type": "belongsTo",
       "model": "CatinWanita",
       "foreignKey": "catinwanitaId"
+    },
+    "invoice": {
+      "type": "belongsTo",
+      "model": "Invoice",
+      "foreignKey": "invoiceId"
     },
     "penghulu": {
       "type": "belongsTo",
       "model": "Penghulu",
       "foreignKey": "penghuluId"
     },
-    "villages": {
+    "village": {
       "type": "belongsTo",
       "model": "Villages",
       "foreignKey": "villageId"
-    },
-    "invoice": {
-      "type": "belongsTo",
-      "model": "Invoice",
-      "foreignKey": "invoiceId"
     }
   },
   "acls": [],

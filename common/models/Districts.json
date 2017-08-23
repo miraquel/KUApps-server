@@ -43,11 +43,6 @@
   },
   "validations": [],
   "relations": {
-    "regency": {
-      "type": "belongsTo",
-      "model": "Regencies",
-      "foreignKey": "regencyId"
-    },
     "villages": {
       "type": "hasMany",
       "model": "Villages",
