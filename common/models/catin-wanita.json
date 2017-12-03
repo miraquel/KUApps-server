@@ -10,6 +10,17 @@
       "type": "number",
       "required": true
     },
+    "no_ktp": {
+      "type": "string",
+      "required": true,
+      "index": {
+        "unique": true
+      }
+    },
+    "url_ktp": {
+      "type": "string",
+      "required": false
+    },
     "nama": {
       "type": "string",
       "required": true
@@ -41,10 +52,10 @@
   },
   "validations": [],
   "relations": {
-    "nikahs": {
-      "type": "hasMany",
-      "model": "Nikah",
-      "foreignKey": "catinwanitaId"
+    "districts": {
+      "type": "belongsTo",
+      "model": "Districts",
+      "foreignKey": "districtId"
     }
   },
   "acls": [],

@@ -20,7 +20,12 @@
     },
     "status": {
       "type": "string",
-      "required": false
+      "required": false,
+      "default": "Menunggu Konfirmasi"
+    },
+    "pendaftarId": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
@@ -36,9 +41,9 @@
       "foreignKey": "catinwanitaId"
     },
     "invoice": {
-      "type": "belongsTo",
+      "type": "hasOne",
       "model": "Invoice",
-      "foreignKey": "invoiceId"
+      "foreignKey": "nikahId"
     },
     "penghulu": {
       "type": "belongsTo",
@@ -49,6 +54,11 @@
       "type": "belongsTo",
       "model": "Villages",
       "foreignKey": "villageId"
+    },
+    "pendaftar": {
+      "type": "belongsTo",
+      "model": "Pendaftar",
+      "foreignKey": "pendaftarId"
     }
   },
   "acls": [],

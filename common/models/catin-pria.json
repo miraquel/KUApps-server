@@ -10,6 +10,17 @@
       "type": "number",
       "required": true
     },
+    "no_ktp": {
+      "type": "string",
+      "required": true,
+      "index": {
+        "unique": true
+      }
+    },
+    "url_ktp": {
+      "type": "string",
+      "required": false
+    },
     "nama": {
       "type": "string",
       "required": true
@@ -45,6 +56,11 @@
       "type": "hasMany",
       "model": "Nikah",
       "foreignKey": "catinpriaId"
+    },
+    "districts": {
+      "type": "belongsTo",
+      "model": "Districts",
+      "foreignKey": "districtId"
     }
   },
   "acls": [],

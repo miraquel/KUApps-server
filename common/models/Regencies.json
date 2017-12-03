@@ -47,6 +47,11 @@
       "type": "hasMany",
       "model": "Districts",
       "foreignKey": "regencyId"
+    },
+    "provinces": {
+      "type": "belongsTo",
+      "model": "Provinces",
+      "foreignKey": "provinceId"
     }
   },
   "acls": [],

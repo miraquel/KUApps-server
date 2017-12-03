@@ -6,10 +6,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "districtId": {
-      "type": "number",
-      "required": true
-    },
     "nama": {
       "type": "string",
       "required": true
@@ -45,6 +41,11 @@
       "type": "hasMany",
       "model": "Nikah",
       "foreignKey": "penghuluId"
+    },
+    "districts": {
+      "type": "belongsTo",
+      "model": "Districts",
+      "foreignKey": "districtId"
     }
   },
   "acls": [
@@ -58,8 +59,7 @@
       "accessType": "EXECUTE",
       "principalType": "ROLE",
       "principalId": "$authenticated",
-      "permission": "ALLOW",
-      "property": "create"
+      "permission": "ALLOW"
     },
     {
       "accessType": "READ",

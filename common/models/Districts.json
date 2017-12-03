@@ -47,6 +47,16 @@
       "type": "hasMany",
       "model": "Villages",
       "foreignKey": "districtId"
+    },
+    "regencies": {
+      "type": "belongsTo",
+      "model": "Regencies",
+      "foreignKey": "regencyId"
+    },
+    "penghulu": {
+      "type": "hasMany",
+      "model": "Penghulu",
+      "foreignKey": "districtId"
     }
   },
   "acls": [],

@@ -72,5 +72,25 @@
   "Role": {
     "dataSource": "dbkuapps",
     "public": true
+  },
+  "Pendaftar": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "CustomAccessToken": {
+    "dataSource": "dbkuapps",
+    "public": false
+  },
+  "Pembayaran": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "AttachmentMetadata": {
+    "dataSource": "dbkuapps",
+    "public": true
+  },
+  "Attachment": {
+    "dataSource": "storage",
+    "public": true
   }
 }

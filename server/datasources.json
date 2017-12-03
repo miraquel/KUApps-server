@@ -8,5 +8,12 @@
     "name": "dbkuapps",
     "user": "root",
     "connector": "mysql"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "../files",
+    "nameConflict": "makeUnique"
   }
 }
