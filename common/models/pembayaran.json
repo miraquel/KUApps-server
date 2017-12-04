@@ -1,0 +1,35 @@
+{
+  "name": "Pembayaran",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "no_slip": {
+      "type": "string",
+      "required": true
+    },
+    "bank": {
+      "type": "string",
+      "required": true
+    },
+    "tanggal": {
+      "type": "date",
+      "required": true
+    },
+    "nominal": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": false,
+      "default": "Menunggu Konfirmasi"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
